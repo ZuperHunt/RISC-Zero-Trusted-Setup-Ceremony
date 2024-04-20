@@ -1,57 +1,100 @@
-Penulis: [nama_penulis](link_twt)
+Penulis: [Naufal](https://twitter.com/0xfal)
 
 # Pengenalan
-Bab ini berisi pengenalan mengenai nama_project
+Bab ini berisi pengenalan mengenai RISC Zero
 
-## Nama_Project
+## RISC Zero
 > [!NOTE]
-> berikan_description_singkat_mengenai_project_tersebut
+> RISC Zero adalah salah satu alternatif _execution environment_ berbasis _zero-knowledge_ atau biasa disebut zkVM (_zero-knowledge virtual machine_)
 
 ### Investor
-taroh_img_investor_jika_ada
+![image](https://github.com/ZuperHunt/RISC-Zero-Trusted-Setup-Ceremony/assets/80172679/d5b6380a-ba87-45f6-b677-6cc8fa2bf737)
 
-# Tutorial XXX
-Bab ini berisi tutorial cara menjalankan XXX
 
-## Requirement
-Syarat menjalankan XXX
-- Spek Komputer
-  
+# Tutorial _Trusted Setup Ceremony_
+Bab ini berisi tutorial cara ikut berkontribusi dalam perayaan RISC Zero_’s trusted setup_ yang merupakan fase pertama dari RISC Zero zkVM 1.0.0 _Roadmap_
+
+## _Requirement_
+Yang diperlukan untuk menjalankan _Trusted Setup Ceremony_:
+- Akun GitHub berumur 1 bulan, memiliki pengikut minimal 1 orang, mengikuti minimal 5 orang, dan memiliki 2 repositori publik
+- Komputer dengan spesifikasi:
+
 | Name | Minimum |
 | ------------- | ------------- |
-| Operating System  | OS_NAME  |
-| CPU  | X Cores  |
-| RAM  | X GB  |
-| SSD  | XX GB  |
-- item_2_dan_seterusnya_jika_ada
-
-> [!TIP]
-> Kami menggunakan Digital Ocean dengan speksifikasi `XX/ X Core/ X GB RAM/ XX GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
+| Operating System  | Linux  |
+| CPU  | - Core  |
+| RAM  | 8 GB  |
+| SSD  | - GB  |
   
-## Dependencies
+## _Dependencies_
+Yang perlu dilakukan sebeleum menjalankan _Trusted Setup Ceremony_:
 
-### Install X 
+### Instalasi NVM (Node Version Manager)
+Instal NVM versi berapa pun, tidak perlu _instal_/_update_ jika di komputer kalian sudah terinstal.
 ```
-sudo apt-get install xxxx
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-## Menjalankan XXX
+### Konfigurasi _Environment_ / _Profile_
+Abaikan step ini jika di komputer kalian sudah terinstal NVM dengan benar.
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
 
-### Run XXX
+### Instalasi `Node.js`
+Instal versi 16.20.
 ```
-code blocks for commands
+nvm install 16.20
 ```
+Gunakan versi 16.20.
+```
+nvm use 16.20
+```
+
+### Instalasi `phase2cli`
+```
+npm i @p0tion/phase2cli
+```
+
+## Menjalankan _Trusted Setup Ceremony_
+
+### _Authenticate with GitHub_
+```
+npx phase2cli auth
+```
+Tunggu sebentar sampai muncul _authentication link_ dan _authentication code_, klik _link_-nya dan masukkan kode.
+
+### _Contribute!_
+```
+npx phase2cli contribute
+```
+Akan muncul opsi `RISC Zero STARK-to_SNARK Prover`, tekan `enter` pada _keyboard_ komputer. Selanjutnya akan ada opsi `randomly` dan `manually`, kalian bebas memilih yang mana, saya pribadi memilih `randomly` biar cepat.
+Kalian akan masuk antrian, tunggu sampai giliran kalian nanti akan memproses kontribusi secara otomatis.
+
+> [!CAUTION]
+> Proses kontribusi mungkin akan memakan waktu tergantung antrian, sampai prosesnya selesai jangan melanjutkan ke step selanjutnya.
+
+### _Cleanup_
+Setelah proses kontribusi selesai, kalian bisa membersihkan GitHub _authorization_.
+```
+npx phase2cli clean
+npx phase2cli logout
+```
+Buka _authorized apps_ pada GitHub mu dan hapus _permissions_ untuk `pse-p0tion-production`. Kamu juga boleh menghapus folder `~/p0tion-tmp` yang dibuat di awal tadi.
 
 ## Help
 
 Join komunitas [Discord ZuperHunt](https://t.co/n7TeWVlA48) jika kamu ada pertanyaan.
 
+Follow [GitHub ZuperHunt](https://github.com/ZuperHunt) dan [X(Twitter) ZuperHunt](https://twitter.com/ZuperHunt)
+
 ## Change Logs
 
 * 0.0.1
-    * Initial Release
+    * Initial release
 
 ## Acknowledgments
 
 Referensi
-* [nama_referensi](link_referensi)
+* [Ceremony contribution public instructions](https://www.risczero.com/blog/ceremony-contribution-public-instructions)
