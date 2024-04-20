@@ -12,7 +12,7 @@ Bab ini berisi pengenalan mengenai RISC Zero
 
 
 # Tutorial _Trusted Setup Ceremony_
-Bab ini berisi tutorial cara ikut berkontribusi dalam perayaan RISC Zero_’s trusted setup_ yang merupakan fase pertama dari RISC Zero zkVM 1.0.0 _Roadmap_
+Bab ini berisi tutorial cara ikut berkontribusi dalam perayaan _RISC Zero’s trusted setup_ yang merupakan fase pertama dari RISC Zero zkVM 1.0.0 _Roadmap_
 
 ## _Requirement_
 Yang diperlukan untuk menjalankan _Trusted Setup Ceremony_:
@@ -59,6 +59,11 @@ npm i @p0tion/phase2cli
 
 ## Menjalankan _Trusted Setup Ceremony_
 
+### Buat `tmux`
+```
+tmux
+```
+
 ### _Authenticate with GitHub_
 ```
 npx phase2cli auth
@@ -83,6 +88,15 @@ npx phase2cli logout
 ```
 Buka _authorized apps_ pada GitHub mu dan hapus _permissions_ untuk `pse-p0tion-production`. Kamu juga boleh menghapus folder `~/p0tion-tmp` yang dibuat di awal tadi.
 
+## Misc
+Hal-hal lain yang mungkin bermanfaat:
+
+### Gimana kalau _disconnect_?
+Menurut blog mereka, antrianmu akan tersimpan. Untuk _re-join_, jalankan ulang perintah `npx phase2cli contribute`.
+
+### Gagal menjalankan via `screen`?
+Gunakan `tmux`.
+
 ## Help
 
 Join komunitas [Discord ZuperHunt](https://t.co/n7TeWVlA48) jika kamu ada pertanyaan.
@@ -92,9 +106,14 @@ Follow [GitHub ZuperHunt](https://github.com/ZuperHunt) dan [X(Twitter) ZuperHun
 ## Change Logs
 
 * 0.0.1
-    * Initial release
+  * Initial release
+* 0.0.2
+  * correct writing
+  * add tmux step and cheatsheet
+  * add misc
 
 ## Acknowledgments
 
 Referensi
 * [Ceremony contribution public instructions](https://www.risczero.com/blog/ceremony-contribution-public-instructions)
+* [tmux cheatsheet](https://quickref.me/tmux.html)
