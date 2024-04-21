@@ -10,22 +10,25 @@ Bab ini berisi pengenalan mengenai RISC Zero
 ### Investor
 ![image](https://github.com/ZuperHunt/RISC-Zero-Trusted-Setup-Ceremony/assets/80172679/d5b6380a-ba87-45f6-b677-6cc8fa2bf737)
 
-
 # Tutorial _Trusted Setup Ceremony_
 Bab ini berisi tutorial cara ikut berkontribusi dalam perayaan _RISC Zero’s trusted setup_ yang merupakan fase pertama dari RISC Zero zkVM 1.0.0 _Roadmap_
 
-## _Requirement_
+## _Requirements_
 Yang diperlukan untuk menjalankan _Trusted Setup Ceremony_:
 - Akun GitHub berumur 1 bulan, memiliki pengikut minimal 1 orang, mengikuti minimal 5 orang, dan memiliki 2 repositori publik
 - Komputer dengan spesifikasi:
 
-| Name | Minimum |
-| ------------- | ------------- |
-| Operating System  | Linux  |
-| CPU  | - Core  |
-| RAM  | 8 GB  |
-| SSD  | - GB  |
-  
+| ✅ Linux | ✅ macOS | ✅ Windows (Native / WSL) |
+| ------------- | ------------- | ------------- |
+
+| Part | Minimum | Recommended |
+| ------------- | ------------- | ------------- |
+| CPU | - | - |
+| RAM | - | 8 GB |
+| SSD | - | - |
+
+Tidak ada detail _system requirement_ dari _official_, hanya menyebutkan RAM saja. Tutorial ini dibuat menggunakan sistem operasi Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda ([cek referensi](https://github.com/ZuperHunt/RISC-Zero-Trusted-Setup-Ceremony#acknowledgments)).
+
 ## _Dependencies_
 Yang perlu dilakukan sebeleum menjalankan _Trusted Setup Ceremony_:
 
